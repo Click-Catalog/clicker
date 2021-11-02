@@ -5,7 +5,8 @@ export default function MustWatch() {
 
   return (
     <div>
-      < MovieCards setMustWatchMovies={setMustWatchMovies} />
+      {/* < MovieCards setMustWatchMovies={setMustWatchMovies} /> */}
+      < MovieCards />
     </div>
   )
 }

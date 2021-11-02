@@ -12,15 +12,15 @@ export default function MovieGeneratorPanel() {
 
     // fetch request to send selected options to backend for API
     // query as an object and reset movies state for display
-    // fetch('/movie', {
-    //   method: 'GET',
-    //   headers: {
-    //     'Content-Type' : 'application/json',
-    //   },
-    //   body: JSON.stringify(queryObj)
-    // })
-    //   .then((res) => res.json())
-    //   .then((res) => props.setMovies(res)) // props or no props?
+    fetch('/api/movie', {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json',
+      },
+      body: JSON.stringify(queryObj)
+    })
+      .then((res) => res.json())
+      .then((res) => props.setMovies(res)) // props or no props?
   }
 
 
