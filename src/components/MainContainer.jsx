@@ -5,9 +5,7 @@ import MovieContainer from './MovieContainer';
 export default function MainContainer( ) {
   return (
     <div>
-      <h1>Login</h1>
-      <h1>MovieContainer</h1>
-      < Login />
+      {/* < Login /> */}
       < MovieContainer />
     </div>
   )
