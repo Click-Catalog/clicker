@@ -1,8 +1,15 @@
 import React from 'react'
+import genreList from '../models/genreList';
 
 export default function MovieGeneratorPanel() {
+  // adding genres to 
+  const genres = [];
+  Object.keys(genreList).forEach(key => {
+    genres.push(key);
+  })
 
   const movieQuery = (select) => {
+    
     const queryObj = {};
 
     queryObj.genre = document.getElementById('genre').value
@@ -30,11 +37,10 @@ export default function MovieGeneratorPanel() {
       <div>
         <label htmlFor='genre'>Genre: </label>
         <select name='genre' id='genre'>
-          <option value='Sci-Fi'>Sci-Fi</option>
-          <option value='Fantasy'>Fantasy</option>
-          <option value='Drama'>Drama</option>
-          <option value='Comedy'>Comedy</option>
-          <option value='Horror'>Horror</option>
+          {genres.map((genre) => {
+            console.log(genre)
+            return <option value={genreList[genre]}>{genre}</option>
+          })}
         </select>
       </div>
 
@@ -54,16 +60,16 @@ export default function MovieGeneratorPanel() {
       <div>
         <label htmlFor='rating'> Rating: </label>
         <select name='rating' id='rating'>
-          <option value='ninety'>90%</option>
-          <option value='eighty'>80%</option>
-          <option value='seventy'>70%</option>
-          <option value='sixty'>60%</option>
-          <option value='fifty'>50%</option>
-          <option value='forty'>40%</option>
-          <option value='thirty'>30%</option>
-          <option value='twenty'>20%</option>
-          <option value='ten'>10%</option>
-          <option value='zero'>0%</option>
+          <option value='9'>90%</option>
+          <option value='8'>80%</option>
+          <option value='7'>70%</option>
+          <option value='6'>60%</option>
+          <option value='5'>50%</option>
+          <option value='4'>40%</option>
+          <option value='3'>30%</option>
+          <option value='2'>20%</option>
+          <option value='1'>10%</option>
+          <option value='0'>0%</option>
         </select>
       </div>
 
