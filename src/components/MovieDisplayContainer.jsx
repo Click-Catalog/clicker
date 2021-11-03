@@ -4,6 +4,7 @@ import GeneratedMovieDisplay from '../pages/generated-movie-display';
 import MustWatch from '../pages/must-watch';
 import Interested from '../pages/interested';
 import Watched from '../pages/watched';
+import styles from '../styles/MovieDisplayContainer.module.css'
 
 export default function MovieDisplayContainer(props) {
   // const [interestedMovies, setInterestedMovies] = useState([]);
@@ -13,7 +14,7 @@ export default function MovieDisplayContainer(props) {
 	// each object should render its own movieCard
 	// each movieCard should display every key/value in its object
 	return (
-		<div>
+		<div className = {styles.container}>
 			<Navbar />
 			<GeneratedMovieDisplay
 				movies={props.movies}

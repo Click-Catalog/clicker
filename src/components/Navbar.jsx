@@ -1,4 +1,7 @@
 import React from 'react'
+
+import styles from '../styles/Navbar.module.css'
+
 import router from 'next/router'
 
 // link components

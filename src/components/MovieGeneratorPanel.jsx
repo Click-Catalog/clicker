@@ -1,5 +1,6 @@
 import React from 'react';
 import genreList from '../models/genreList';
+import styles from '../styles/MovieGeneratorPanel.module.css'
 
 export default function MovieGeneratorPanel(props) {
 	// adding genres to
@@ -32,11 +33,12 @@ export default function MovieGeneratorPanel(props) {
 	};
 
 	return (
-		<div className='movieGeneratorPanel'>
+		<div className={styles.container}>
 			{/* make these drop down menus dynamic */}
 			<div>
-				<label htmlFor='genre'>Genre: </label>
-				<select name='genre' id='genre'>
+				{/* <label htmlFor='genre'></label> */}
+				<select name='genre' className={styles.input}>
+					<option value = '' id='genre'>Select By Genre</option>
 					{genres.map((genre) => {
 						// console.log(genre);
 						return <option value={genreList[genre]}>{genre}</option>;
@@ -45,22 +47,14 @@ export default function MovieGeneratorPanel(props) {
 			</div>
 
 			<div>
-				<label htmlFor='year'>Year: </label>
-				<input id='year' type="text"></input>
-				{/* <select name='year' id='year'>
-					<option value='2020'>2020s</option>
-					<option value='2010'>2010s</option>
-					<option value='2000'>2000s</option>
-					<option value='1990'>1990s</option>
-					<option value='1980'>1980s</option>
-					<option value='1970'>1970s</option>
-					<option value='1960'>1960s</option>
-				</select> */}
+				{/* <label htmlFor='year'></label> */}
+				<input className={styles.input}  id='year' placeholder = 'Select By Year' type="text"></input>
 			</div>
 
 			<div>
-				<label htmlFor='rating'> Rating: </label>
-				<select name='rating' id='rating'>
+				{/* <label htmlFor='rating'> </label> */}
+				<select name='rating' className={styles.input}>
+					<option id="rating" value=''>Select By User Rating</option>
 					<option value='10'>10</option>
 					<option value='9'>9</option>
 					<option value='8'>8</option>
@@ -74,7 +68,7 @@ export default function MovieGeneratorPanel(props) {
 				</select>
 			</div>
 
-			<button className='generateMoviesButton' onClick={movieQuery}>
+			<button className={styles.button} onClick={movieQuery}>
 				Generate Movies
 			</button>
 		</div>
