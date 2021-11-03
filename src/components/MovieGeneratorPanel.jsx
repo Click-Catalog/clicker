@@ -49,8 +49,8 @@ export default function MovieGeneratorPanel(props) {
 			</div>
 
 			<div>
-				<label htmlFor='year'>Year: </label>
-				<input id='year' type='text'></input>
+				{/* <label htmlFor='year'></label> */}
+				<input id='year' placeholder='Select By Year' type='text'></input>
 				{/* <select name='year' id='year'>
 					<option value='2020'>2020s</option>
 					<option value='2010'>2010s</option>
