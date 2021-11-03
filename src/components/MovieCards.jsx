@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react'
+import { useMustWatch, useMustWatchUpdateContext } from '../mustWatchMovies';
   
 export default function MovieCards(props) {
 
+  const mustWatch = useMustWatch()
+  const toggleMustWatch = useMustWatchUpdateContext()
+  
   // Iterate through movieCard's data to display each detail in it's own <p>
   // Display image as well.
   const responseCardDetails = [];
@@ -28,11 +32,12 @@ export default function MovieCards(props) {
     <div>
       <span>
         {responseCardDetails}
+        {/* <button></button> */}
       </span>
       <div>
-        {/* <button className='must-watch' onClick={props.setMustWatchMovies}>Must Watch</button>
+        <button className='must-watch' onClick={toggleMustWatch}>Must Watch</button>
         <button className='interested' onClick={props.setInterestedMovies}>Interested</button>
-        <button className='watched' onClick={props.setWatchedMovies}>Watched</button> */}
+        <button className='watched' onClick={props.setWatchedMovies}>Watched</button>
       </div>
     </div>
   );
