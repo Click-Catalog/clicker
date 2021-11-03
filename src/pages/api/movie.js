@@ -21,15 +21,15 @@ export default async function test(req, res) {
 				movieArr.push({
 					id: movie.id,
 					details: {
-						title: movie.title,
-						year: movie.release_date,
-						overview: movie.overview,
-						rating: movie.vote_average,
+						Title: movie.title,
+						Year: movie.release_date,
+						Overview: movie.overview,
+						Rating: movie.vote_average,
 						image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
 					},
-					mustWatch: false,
-					interested: false,
-					watched: false,
+					// mustWatch: false,
+					// interested: false,
+					// watched: false,
 				});
 			});
 			return res.status(200).send(movieArr);

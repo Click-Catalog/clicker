@@ -26,10 +26,10 @@ export default function MovieCards(props) {
 			);
 		}
 		if (
-			keys[i] === 'title' ||
-			keys[i] === 'year' ||
-			keys[i] === 'overview' ||
-			keys[i] === 'rating'
+			keys[i] === 'Title' ||
+			keys[i] === 'Year' ||
+			keys[i] === 'Overview' ||
+			keys[i] === 'Rating'
 		) {
 			details.push(
 				<p className={keys[i]}>
