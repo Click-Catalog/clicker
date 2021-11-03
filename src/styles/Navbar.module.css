@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+  justify-content: space-around;
+  height: 20px;
+}
