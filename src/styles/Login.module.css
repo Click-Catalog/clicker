@@ -1,0 +1,11 @@
+.logInComp {
+    display: flex;
+    justify-content: center;
+}
+
+.logInButton {
+    margin: 2 em;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+}
