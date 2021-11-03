@@ -13,7 +13,6 @@ export default function MovieDisplayContainer(props) {
 	// iterate thru props.movies array of object
 	// each object should render its own movieCard
 	// each movieCard should display every key/value in its object
-	console.log(props.movies);
 	return (
 		<div>
 			<Navbar />

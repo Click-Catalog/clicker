@@ -26,7 +26,8 @@ export default function MovieGeneratorPanel(props) {
 			body: JSON.stringify(queryObj),
 		})
 			.then((res) => res.json())
-			.then((res) => props.setMovies(res)); // props or no props?
+			.then((res) => props.setMovies(res));
+		// .then(console.log(props.movies)); // props or no props?
 		// .then(console.log(`This is currently stored in state: ${props.movies}`));
 	};
 

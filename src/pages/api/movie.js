@@ -25,11 +25,11 @@ export default async function test(req, res) {
 						year: movie.release_date,
 						overview: movie.overview,
 						rating: movie.vote_average,
+						image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
 					},
 					mustWatch: false,
 					interested: false,
 					watched: false,
-					image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
 				});
 			});
 			return res.status(200).send(movieArr);
