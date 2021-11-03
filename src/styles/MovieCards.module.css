@@ -5,6 +5,10 @@
 	margin: 10px;
 }
 
+.cardContainer {
+	border: 1px solid red;
+}
+
 .detailsContainer {
 	border: 1px solid red;
 }
