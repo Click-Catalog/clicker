@@ -7,30 +7,11 @@ import mustWatchReducer from './reducers/mustWatchReducer'
 import watchedReducer from './reducers/watchedReducer'
 
 const GlobalContext = createContext({})
-// const mustWatchUpdateContext = React.createContext()
-
-// const interestedContext = React.createContext()
-// const interestedUpdateContext = React.createContext()
-
-// const watchedContext = React.createContext()
-// const watchedUpdateContext = React.createContext()
-
-// export function useMustWatch() {
-//   return useContext(mustWatchContext)
-// }
-
-// export function useMustWatchUpdateContext() {
-//   return useContext(mustWatchUpdateContext)
-// }
 
 export function GlobalProvider({ children }) {
   const [mustWatch, mustWatchDispatch] = useReducer(mustWatchReducer, mustWatchState)
   const [interested, interestedDispatch] = useReducer(interestedReducer, interestedState)
   const [watched, watchedDispatch] = useReducer(watchedReducer, watchedState)
-
-  // function toggleMustWatch() {
-  //   setMustWatch(prevMustWatch => !prevMustWatch)
-  // }
 
   return (
     <GlobalContext.Provider value={{

@@ -1,5 +1,4 @@
 import React from 'react'
-import { isPropertySignature } from 'typescript';
 import styles from '../styles/Login.module.css';
 
 export default function Login() {
@@ -55,11 +54,12 @@ const userQuerySignUp = (select) => {
 
 
   return (
-    <div>
+    <div className={styles.logInComp}>
       <input type="text" placeholder="username" id='username'required />
+      <br />
       <input type="password" placeholder="password" id='password'required />
-      <button onClick={userQueryLogIn}>Login</button>
-      <button onClick={userQuerySignUp}>Sign Up</button>
+      <button onClick={userQueryLogIn} className={styles.logInButton}>Login</button>
+      <button onClick={userQuerySignUp} className={styles.logInButton}>Sign Up</button>
     </div>
   )
 }

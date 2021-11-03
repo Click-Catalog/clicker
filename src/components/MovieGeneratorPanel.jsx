@@ -10,6 +10,7 @@ export default function MovieGeneratorPanel(props) {
 	});
 
 	const movieQuery = (select) => {
+		props.setViewType('GeneratedMovieDisplay');
 		const queryObj = {};
 
 		queryObj.genre = document.getElementById('genre').value;
