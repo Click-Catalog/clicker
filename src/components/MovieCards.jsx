@@ -6,13 +6,19 @@ export default function MovieCards(props) {
   // Display image as well.
   const responseCardDetails = [];
 
-  // const keys = Object.keys(props.cardData);
+  const keys = Object.keys(props.cardData.details);
 
-  // for (let i = 0; i < keys.length; i++) {
-  //   responseCardDetails.push(
-  //   <p key={i} className={keys[i]} >{keys[i]} : {props.cardData[keys[i]]}</p>
-  //   )
-  // }
+  for (let i = 0; i < keys.length; i++) {
+    if (keys[i] === 'image') {
+      responseCardDetails.push(
+        <img width="200px" src={props.cardData.details[keys[i]]}></img>
+      )
+    } else {
+      responseCardDetails.push(
+        <p key={i} className={keys[i]} >{keys[i]} : {props.cardData.details[keys[i]]}</p>
+        )
+    }
+  }
 
   // setMustWatchMovies={setMustWatchMovies} 
   // setInterestedMovies={setInterestedMovies} 
@@ -22,9 +28,6 @@ export default function MovieCards(props) {
     <div>
       <span>
         {responseCardDetails}
-      </span>
-      <span>
-        (image)
       </span>
       <div>
         {/* <button className='must-watch' onClick={props.setMustWatchMovies}>Must Watch</button>
