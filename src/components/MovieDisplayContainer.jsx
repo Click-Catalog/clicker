@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import Navbar from './Navbar';
 import GeneratedMovieDisplay from '../pages/generated-movie-display';
 import MustWatch from '../pages/must-watch';
@@ -7,27 +7,27 @@ import Watched from '../pages/watched';
 import styles from '../styles/MovieDisplayContainer.module.css'
 
 export default function MovieDisplayContainer(props) {
-  
-  const [mustWatchMovies, setMustWatchMovies] = useState([]);
-  const [interestedMovies, setInterestedMovies] = useState([]);
-  const [watchedMovies, setWatchedMovies] = useState([]);
+  // const [interestedMovies, setInterestedMovies] = useState([]);
+  // const [watchedMovies, setWatchedMovies] = useState([])
 
 	// iterate thru props.movies array of object
 	// each object should render its own movieCard
 	// each movieCard should display every key/value in its object
-	console.log(props.movies);
 	return (
 		<div className = {styles.container}>
 			<Navbar />
 			<GeneratedMovieDisplay
 				movies={props.movies}
-				setMustWatchMovies={setMustWatchMovies}
-				setInterestedMovies={setInterestedMovies}
-				setWatchedMovies={setWatchedMovies}
+				// setMustWatchMovies={setMustWatchMovies}
+				// setInterestedMovies={setInterestedMovies}
+				// setWatchedMovies={setWatchedMovies}
 			/>
-			<MustWatch mustWatchMovies={mustWatchMovies} />
+			<MustWatch />
+			<Interested  />
+			<Watched  />
+      {/* <MustWatch mustWatchMovies={mustWatchMovies} />
 			<Interested interestedMovies={interestedMovies} />
-			<Watched watchedMovies={watchedMovies} />
+			<Watched watchedMovies={watchedMovies} /> */}
 		</div>
 	);
 }
