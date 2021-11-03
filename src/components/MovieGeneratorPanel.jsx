@@ -1,5 +1,6 @@
 import React from 'react';
 import genreList from '../models/genreList';
+import styles from '../styles/MovieGeneratorPanel.module.css';
 
 export default function MovieGeneratorPanel(props) {
 	// adding genres to
@@ -32,11 +33,14 @@ export default function MovieGeneratorPanel(props) {
 	};
 
 	return (
-		<div className='movieGeneratorPanel'>
+		<div className={styles.container}>
 			{/* make these drop down menus dynamic */}
 			<div>
-				<label htmlFor='genre'>Genre: </label>
-				<select name='genre' id='genre'>
+				{/* <label htmlFor='genre'></label> */}
+				<select name='genre' className={styles.input}>
+					<option value='' id='genre'>
+						Select By Genre
+					</option>
 					{genres.map((genre) => {
 						// console.log(genre);
 						return <option value={genreList[genre]}>{genre}</option>;
@@ -59,8 +63,11 @@ export default function MovieGeneratorPanel(props) {
 			</div>
 
 			<div>
-				<label htmlFor='rating'> Rating: </label>
-				<select name='rating' id='rating'>
+				{/* <label htmlFor='rating'> </label> */}
+				<select name='rating' className={styles.input}>
+					<option id='rating' value=''>
+						Select By User Rating
+					</option>
 					<option value='10'>10</option>
 					<option value='9'>9</option>
 					<option value='8'>8</option>
@@ -74,7 +81,7 @@ export default function MovieGeneratorPanel(props) {
 				</select>
 			</div>
 
-			<button className='generateMoviesButton' onClick={movieQuery}>
+			<button className={styles.button} onClick={movieQuery}>
 				Generate Movies
 			</button>
 		</div>
