@@ -18,7 +18,7 @@ export default function MainContainer( ) {
   // console.log('mustWatchContext: ' + mustWatchContext);
   return (
     <div className={styles.container}>
-      {/* < Login /> */}
+      < Login />
       < MovieContainer />
     </div>
   )

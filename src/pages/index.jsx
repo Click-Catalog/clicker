@@ -5,7 +5,6 @@ import Login from '../components/Login'
 export default function index(props) {
   return (
     <div>
-      < Login />
       < MainContainer />
     </div>
   )

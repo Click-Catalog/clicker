@@ -1,5 +1,4 @@
 import React from 'react'
-// import { isPropertySignature } from 'typescript';
 import styles from '../styles/Login.module.css';
 
 export default function Login() {
