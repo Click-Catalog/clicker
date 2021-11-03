@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Login from './Login';
 import MovieContainer from './MovieContainer';
 
@@ -7,6 +7,9 @@ import styles from '../styles/MainContainer.module.css'
 // import { useStore } from '../context/Provider';
 
 export default function MainContainer( ) {
+
+  // const [user, logIn] = useState('');
+
   
   // const { mustWatchContext, interestedContext, watchedContext } = useStore();
   // const { mustWatch, mustWatchDispatch } = mustWatchContext;
@@ -15,7 +18,7 @@ export default function MainContainer( ) {
   // console.log('mustWatchContext: ' + mustWatchContext);
   return (
     <div className={styles.container}>
-      {/* < Login /> */}
+      < Login />
       < MovieContainer />
     </div>
   )
