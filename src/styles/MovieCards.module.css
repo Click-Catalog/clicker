@@ -6,9 +6,34 @@
 }
 
 .cardContainer {
-	border: 1px solid red;
+	border: 1px solid rgb(196, 196, 196);
+	margin: 25px;
+	padding: 20px;
+	width: 60rem;
 }
 
-.detailsContainer {
-	border: 1px solid red;
+.detailsContainer p {
+	display: flex;
+	flex-direction: column;
+	width: 35rem;
+	font-size: 1.2rem;
+}
+
+.imgContainer {
+	/* border: 1px solid purple; */
+	order: 2;
+}
+
+.detailImgContainer {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.buttonContainer button {
+	padding: 5px;
+	font-size: 0.8rem;
+	border: 1px solid lightblue;
+	background-color: lightblue;
+	color: rgb(63, 63, 63);
+	margin-right: 10px;
 }

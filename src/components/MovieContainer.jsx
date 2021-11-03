@@ -16,16 +16,20 @@ export default function MovieContainer(props) {
 		<div>
 			<WelcomeNavbar />
 			<div className={styles.container}>
-				<MovieGeneratorPanel
-					setViewType={setViewType}
-					setMovies={setMovies}
-					movies={movies}
-				/>
-				<MovieDisplayContainer
-					viewType={viewType}
-					setViewType={setViewType}
-					movies={movies}
-				/>
+				<div className={styles.mgpContainer}>
+					<MovieGeneratorPanel
+						setViewType={setViewType}
+						setMovies={setMovies}
+						movies={movies}
+					/>
+				</div>
+				<div className={styles.movieDisplayContainer}>
+					<MovieDisplayContainer
+						viewType={viewType}
+						setViewType={setViewType}
+						movies={movies}
+					/>
+				</div>
 			</div>
 		</div>
 	);
