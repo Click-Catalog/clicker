@@ -1,5 +1,7 @@
 import React from 'react'
 
+// link components
+
 export default function Navbar() {
   return (
     <div>

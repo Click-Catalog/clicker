@@ -7,7 +7,7 @@ import Watched from '../pages/watched';
 
 export default function MovieDisplayContainer(props) {
   
-  const [mustWatchMovies, setMustWatchMovies] = useState([ { Title: 'Dune', Year: '2021', Director: 'Dennis Villeneuve' }]);
+  const [mustWatchMovies, setMustWatchMovies] = useState([]);
   const [interestedMovies, setInterestedMovies] = useState([]);
   const [watchedMovies, setWatchedMovies] = useState([]);
 

@@ -3,21 +3,21 @@ import MovieCards from '../components/MovieCards'
 
 export default function MustWatch(props) {
   // For each movie object in props.movies array, create a movieCard.
-  const movieCardsArray = [];
-  for (let i = 0; i < props.mustWatchMovies.length; i += 1) {
-    movieCardsArray.push(
-    < MovieCards 
-      key={i} 
-      cardData={props.mustWatchMovies[i]} 
-      setMustWatchMovies={props.setMustWatchMovies} 
-      setInterestedMovies={props.setInterestedMovies} 
-      setWatchedMovies={props.setWatchedMovies}
-    />)
-  }
+  // const movieCardsArray = [];
+  // for (let i = 0; i < props.mustWatchMovies.length; i += 1) {
+  //   movieCardsArray.push(
+  //   < MovieCards 
+  //     key={i} 
+  //     cardData={props.mustWatchMovies[i]} 
+  //     setMustWatchMovies={props.setMustWatchMovies} 
+  //     setInterestedMovies={props.setInterestedMovies} 
+  //     setWatchedMovies={props.setWatchedMovies}
+  //   />)
+  // }
   return (
     <div>
       {/* < MovieCards setMustWatchMovies={setMustWatchMovies} /> */}
-      {movieCardsArray}
+      {/* {movieCardsArray} */}
     </div>
   )
 }

@@ -26,7 +26,8 @@ export default function MovieGeneratorPanel(props) {
 			body: JSON.stringify(queryObj),
 		})
 			.then((res) => res.json())
-			.then((res) => props.setMovies(res)); // props or no props?
+			.then((res) => props.setMovies(res));
+			// .then((res) => props.setMovies(res)); // props or no props?
 		// .then(console.log(`This is currently stored in state: ${props.movies}`));
 	};
 
@@ -45,7 +46,8 @@ export default function MovieGeneratorPanel(props) {
 
 			<div>
 				<label htmlFor='year'>Year: </label>
-				<select name='year' id='year'>
+				<input id='year' type="text"></input>
+				{/* <select name='year' id='year'>
 					<option value='2020'>2020s</option>
 					<option value='2010'>2010s</option>
 					<option value='2000'>2000s</option>
@@ -53,22 +55,22 @@ export default function MovieGeneratorPanel(props) {
 					<option value='1980'>1980s</option>
 					<option value='1970'>1970s</option>
 					<option value='1960'>1960s</option>
-				</select>
+				</select> */}
 			</div>
 
 			<div>
 				<label htmlFor='rating'> Rating: </label>
 				<select name='rating' id='rating'>
-					<option value='9'>90%</option>
-					<option value='8'>80%</option>
-					<option value='7'>70%</option>
-					<option value='6'>60%</option>
-					<option value='5'>50%</option>
-					<option value='4'>40%</option>
-					<option value='3'>30%</option>
-					<option value='2'>20%</option>
-					<option value='1'>10%</option>
-					<option value='0'>0%</option>
+					<option value='10'>10</option>
+					<option value='9'>9</option>
+					<option value='8'>8</option>
+					<option value='7'>7</option>
+					<option value='6'>6</option>
+					<option value='5'>5</option>
+					<option value='4'>4</option>
+					<option value='3'>3</option>
+					<option value='2'>2</option>
+					<option value='1'>1</option>
 				</select>
 			</div>
 
