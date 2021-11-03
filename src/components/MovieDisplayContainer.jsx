@@ -7,27 +7,27 @@ import Watched from '../pages/watched';
 import styles from '../styles/MovieDisplayContainer.module.css'
 
 export default function MovieDisplayContainer(props) {
-  // const [interestedMovies, setInterestedMovies] = useState([]);
-  // const [watchedMovies, setWatchedMovies] = useState([])
-
 	// iterate thru props.movies array of object
 	// each object should render its own movieCard
 	// each movieCard should display every key/value in its object
 	return (
 		<div className = {styles.container}>
-			<Navbar />
-			<GeneratedMovieDisplay
-				movies={props.movies}
-				// setMustWatchMovies={setMustWatchMovies}
-				// setInterestedMovies={setInterestedMovies}
-				// setWatchedMovies={setWatchedMovies}
+			<Navbar 
+				setViewType={props.setViewType}
 			/>
-			<MustWatch />
-			<Interested  />
-			<Watched  />
-      {/* <MustWatch mustWatchMovies={mustWatchMovies} />
-			<Interested interestedMovies={interestedMovies} />
-			<Watched watchedMovies={watchedMovies} /> */}
+
+			{props.viewType == 'GeneratedMovieDisplay' ? (
+				<GeneratedMovieDisplay
+					setViewType={props.setViewType}
+					movies={props.movies}
+				/>
+			) : props.viewType == 'MustWatch' ? (
+				<MustWatch />
+			) : props.viewType == 'Interested' ? (
+				<Interested />
+			) : props.viewType == 'Watched' ? (
+				<Watched />
+			) : null}
 		</div>
 	);
 }

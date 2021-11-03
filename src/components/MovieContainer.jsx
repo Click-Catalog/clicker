@@ -6,6 +6,7 @@ import styles from '../styles/MovieContainer.module.css'
 
 export default function MovieContainer(props) {
 	const [movies, setMovies] = useState([]);
+	const [viewType, setViewType] = useState('GeneratedMovieDisplay');
 
 	// set hook for movieCard state
 	// pass function down to movieGeneratorPanel
@@ -15,8 +16,8 @@ export default function MovieContainer(props) {
 		<div>
 			<WelcomeNavbar />
 			<div className = {styles.container}>
-				<MovieGeneratorPanel setMovies={setMovies} movies={movies} />
-				<MovieDisplayContainer movies={movies} />
+				<MovieGeneratorPanel setViewType={setViewType} setMovies={setMovies} movies={movies} />
+				<MovieDisplayContainer viewType={viewType} setViewType={setViewType} movies={movies} />
 			</div>
 		</div>
 	);

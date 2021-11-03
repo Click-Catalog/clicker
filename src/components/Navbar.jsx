@@ -1,21 +1,18 @@
 import React from 'react'
-
 import styles from '../styles/Navbar.module.css'
-
-import router from 'next/router'
 
 // link components
 
-export default function Navbar() {
+export default function Navbar({setViewType}) {
   return (
     <div>
-      <span onClick={() => router.replace('/must-watch')}>
+      <span onClick={() => setViewType('MustWatch')}>
           Must Watch 
       </span>
-      <span onClick={() => router.replace('/interested')}>
+      <span onClick={() => setViewType('Interested')}>
         Interested 
       </span>
-      <span onClick={() => router.replace('/watched')}>
+      <span onClick={() => setViewType('Watched')}>
         Watched
       </span>
     </div>
