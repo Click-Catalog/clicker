@@ -1,23 +1,10 @@
 import React from 'react'
-import MovieCards from '../components/MovieCards'
+import Interested from '../components/Interested'
 
-export default function Interested(props) {
-  // For each movie object in props.movies array, create a movieCard.
-  // const movieCardsArray = [];
-  // for (let i = 0; i < props.interestedMovies.length; i += 1) {
-  //   movieCardsArray.push(
-  //   < MovieCards 
-  //     key={i} 
-  //     cardData={props.interestedMovies[i]} 
-  //     setMustWatchMovies={props.setMustWatchMovies} 
-  //     setInterestedMovies={props.setInterestedMovies} 
-  //     setWatchedMovies={props.setWatchedMovies}
-  //   />)
-  // }
-
+export default function InterestedPage(props) {
   return (
     <div>
-      {/* {movieCardsArray} */}
+      < Interested />
     </div>
   )
 }
