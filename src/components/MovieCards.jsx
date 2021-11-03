@@ -41,7 +41,7 @@ export default function MovieCards(props) {
   }
   const toggleInterested = (e) => {
     for (let i = 0; i < interested.length; i++) {
-      if (mustWatch[i].id === props.id) {
+      if (interested[i].id === props.id) {
         return;
       }
     }
@@ -52,7 +52,7 @@ export default function MovieCards(props) {
 }
   const toggleWatched = (e) => {
     for (let i = 0; i < watched.length; i++) {
-      if (mustWatch[i].id === props.id) {
+      if (watched[i].id === props.id) {
         return;
       }
     }
