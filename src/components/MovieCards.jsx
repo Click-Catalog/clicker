@@ -6,13 +6,13 @@ export default function MovieCards(props) {
   // Display image as well.
   const responseCardDetails = [];
 
-  const keys = Object.keys(props.cardData);
+  // const keys = Object.keys(props.cardData);
 
-  for (let i = 0; i < keys.length; i++) {
-    responseCardDetails.push(
-    <p key={i} className={keys[i]} >{keys[i]} : {props.cardData[keys[i]]}</p>
-    )
-  }
+  // for (let i = 0; i < keys.length; i++) {
+  //   responseCardDetails.push(
+  //   <p key={i} className={keys[i]} >{keys[i]} : {props.cardData[keys[i]]}</p>
+  //   )
+  // }
 
   // setMustWatchMovies={setMustWatchMovies} 
   // setInterestedMovies={setInterestedMovies} 
@@ -27,9 +27,9 @@ export default function MovieCards(props) {
         (image)
       </span>
       <div>
-        <button className='must-watch' onClick={props.setMustWatchMovies}>Must Watch</button>
+        {/* <button className='must-watch' onClick={props.setMustWatchMovies}>Must Watch</button>
         <button className='interested' onClick={props.setInterestedMovies}>Interested</button>
-        <button className='watched' onClick={props.setWatchedMovies}>Watched</button>
+        <button className='watched' onClick={props.setWatchedMovies}>Watched</button> */}
       </div>
     </div>
   );
