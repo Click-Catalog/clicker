@@ -6,9 +6,10 @@ import Interested from '../pages/interested';
 import Watched from '../pages/watched';
 
 export default function MovieDisplayContainer(props) {
-	const [mustWatchMovies, setMustWatchMovies] = useState([]);
-	const [interestedMovies, setInterestedMovies] = useState([]);
-	const [watchedMovies, setWatchedMovies] = useState([]);
+  
+  const [mustWatchMovies, setMustWatchMovies] = useState([]);
+  const [interestedMovies, setInterestedMovies] = useState([]);
+  const [watchedMovies, setWatchedMovies] = useState([]);
 
 	// iterate thru props.movies array of object
 	// each object should render its own movieCard
