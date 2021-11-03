@@ -8,11 +8,9 @@ export default function GeneratedMovieDisplay(props) {
   for (let i = 0; i < props.movies.length; i += 1) {
     movieCardsArray.push(
     < MovieCards 
-      key={i} 
+      key={props.movies[i].id} 
+      id={props.movies[i].id}
       cardData={props.movies[i]} 
-      setMustWatchMovies={props.setMustWatchMovies} 
-      setInterestedMovies={props.setInterestedMovies} 
-      setWatchedMovies={props.setWatchedMovies}
     />)
   }
   return (

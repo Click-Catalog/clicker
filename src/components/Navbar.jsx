@@ -1,24 +1,19 @@
 import React from 'react'
+import router from 'next/router'
 
 // link components
 
 export default function Navbar() {
   return (
     <div>
-      <span>
-        <a href='./must-watch' className='must-watch'>
+      <span onClick={() => router.replace('/must-watch')}>
           Must Watch 
-        </a>
       </span>
-      <span>
-      <a href='./interested' className='interested'>
+      <span onClick={() => router.replace('/interested')}>
         Interested 
-      </a>
       </span>
-      <span>
-      <a href='./watched' className='watched'>
+      <span onClick={() => router.replace('/watched')}>
         Watched
-      </a>
       </span>
     </div>
   );
