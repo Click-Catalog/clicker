@@ -1,0 +1,14 @@
+.container {
+  border: 1px solid purple;
+  padding: 20px;
+}
+
+.input {
+  width: 18rem;
+  padding: 5px;
+}
+
+.button {
+  padding: 5px;
+  border: 1px solid gray;
+}

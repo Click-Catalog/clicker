@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MovieGeneratorPanel from './MovieGeneratorPanel';
 import MovieDisplayContainer from './MovieDisplayContainer';
 import WelcomeNavbar from './WelcomeNavbar';
+import styles from '../styles/MovieContainer.module.css'
 
 export default function MovieContainer(props) {
 	const [movies, setMovies] = useState([]);
@@ -13,8 +14,10 @@ export default function MovieContainer(props) {
 	return (
 		<div>
 			<WelcomeNavbar />
-			<MovieGeneratorPanel setMovies={setMovies} movies={movies} />
-			<MovieDisplayContainer movies={movies} />
+			<div className = {styles.container}>
+				<MovieGeneratorPanel setMovies={setMovies} movies={movies} />
+				<MovieDisplayContainer movies={movies} />
+			</div>
 		</div>
 	);
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useStore } from '../context/Provider';
   
-export default function MovieCards(props) {
+export default function MustWatchCards(props) {
   
   const { mustWatchContext, interestedContext, watchedContext } = useStore();
   const { mustWatch, mustWatchDispatch } = mustWatchContext;
@@ -28,38 +28,11 @@ export default function MovieCards(props) {
     }
   }
 
-  const toggleMustWatch = (e) => {
-    for (let i = 0; i < mustWatch.length; i++) {
-      if (mustWatch[i].id === props.id) {
-        return;
-      }
-    }
-    mustWatchDispatch({
-      type: 'addMustWatch', 
-      message: props.cardData,
+  const removeMustWatch = (e) => {
+    return mustWatchDispatch({
+      type: 'removeMustWatch', 
+      message: props.cardData.id,
     });
-  }
-  const toggleInterested = (e) => {
-    for (let i = 0; i < interested.length; i++) {
-      if (mustWatch[i].id === props.id) {
-        return;
-      }
-    }
-    interestedDispatch({
-    type: 'toggleInterested', 
-    message: props.cardData,
-  });
-}
-  const toggleWatched = (e) => {
-    for (let i = 0; i < watched.length; i++) {
-      if (mustWatch[i].id === props.id) {
-        return;
-      }
-    }
-    watchedDispatch({
-    type: 'toggleWatched', 
-    message: props.cardData,
-  });
   }
      
   return (
@@ -69,9 +42,7 @@ export default function MovieCards(props) {
         {/* <button></button> */}
       </span>
       <div>
-        <button className='must-watch' onClick={toggleMustWatch}>Must Watch</button>
-        <button className='interested' onClick={toggleInterested}>Interested</button>
-        <button className='watched' onClick={toggleWatched}>Watched</button>
+        <button className='remove-must-watch' onClick={removeMustWatch}>Remove Must Watch</button>
       </div>
     </div>
   );
