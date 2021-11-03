@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import router from 'next/router';
 import styles from '../styles/Login.module.css';
 
 export default function Login() {
@@ -18,10 +19,11 @@ export default function Login() {
 			},
 			body: JSON.stringify(queryObj),
 		})
-    .then((res) => res.json())
     .then((res) => {
-      if (res.status === '200') {
-        props.logIn(res)
+      console.log(res.status)
+      if (res.status === 200) {
+        router.replace('/dashboard');
+        // props.logIn(res);
         // ^run from Main Container if we want the state to change the user after logging in
       }
       else return 'Not able to log in, try again or sign up.'

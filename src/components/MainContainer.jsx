@@ -19,7 +19,7 @@ export default function MainContainer( ) {
   return (
     <div className={styles.container}>
       < Login />
-      < MovieContainer />
+      {/* < MovieContainer /> */}
     </div>
   )
 }
