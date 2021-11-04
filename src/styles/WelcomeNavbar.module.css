@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap'); */
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid blue;
-  height: 5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid rgb(44, 44, 46);
+	height: 5em;
 }
 
 .logoutButton {
-    margin: 20px;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9em;
+	margin: 20px;
+	padding: 10px;
+	background-color: white;
+	/* font-family: 'Roboto', sans-serif; */
+	font-size: 0.9em;
 }
 
 .logoutButton:hover {
-    background-color: white;
+	background-color: white;
 }
 
 .headerText {
-    display: flex;
-    align-self: center;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    padding-left: 10px;
-    /* font-family: monospace; */
+	display: flex;
+	align-self: center;
+	/* font-family: 'Zen Kaku Gothic Antique', sans-serif; */
+	padding-left: 10px;
+	/* font-family: monospace; */
 }

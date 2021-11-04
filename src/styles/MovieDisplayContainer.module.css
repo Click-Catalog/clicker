@@ -1,4 +1,14 @@
 .container {
-  /* display: flex; */
-  /* flex-direction: column; */
+	display: flex;
+	/* flex-direction: column; */
+	/* border: 1px solid red; 
+	
+	*/
+	justify-content: center;
+	/* overflow-y: scroll; */
+}
+
+.navContainer {
+	/* border: 1px solid orange; */
+	border-bottom: 1px solid rgb(33, 33, 33);
 }

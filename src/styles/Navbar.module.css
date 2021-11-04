@@ -1,7 +1,18 @@
 .container {
-  display: flex;
-  border: 1px solid red;
-  width: 100%;
-  justify-content: space-around;
-  height: 20px;
+	display: flex;
+	/* border: 1px solid red; */
+	/* justify-content: space-around; */
+	/* height: 20px; */
+	justify-content: flex-end;
+	/* width: 100px; */
+	/* border: 5px solid red; */
+	margin-right: 15px;
+	padding: 5px;
+}
+
+.container span {
+	margin-left: 40px;
+}
+
+.container span:hover {
 }

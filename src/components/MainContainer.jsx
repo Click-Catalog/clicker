@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Login from './Login';
 import MovieContainer from './MovieContainer';
 
-import styles from '../styles/MainContainer.module.css'
+import styles from '../styles/MainContainer.module.css';
 
 // import { useStore } from '../context/Provider';
 
@@ -19,7 +19,7 @@ export default function MainContainer( ) {
   return (
     <div className={styles.container}>
       < Login />
-      < MovieContainer />
+      {/* < MovieContainer /> */}
     </div>
   )
 }
