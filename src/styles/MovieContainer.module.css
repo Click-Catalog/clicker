@@ -2,6 +2,8 @@
 	display: flex;
 	/* border: 1px solid green; */
 	justify-content: space-between;
+	/* border: 1px solid red; */
+	height: 2000vh;
 }
 
 .mgpContainer {

@@ -39,10 +39,10 @@ export default function MovieGeneratorPanel(props) {
 			<div>
 				<div>
 					{/* <label htmlFor='genre'></label> */}
-					<select name='genre' className={styles.input}>
-						<option value='' id='genre'>
+					<select id='genre' name='genre' className={styles.input}>
+						{/* <option value='' id='genre'>
 							Select By Genre
-						</option>
+						</option> */}
 						{genres.map((genre) => {
 							// console.log(genre);
 							return <option value={genreList[genre]}>{genre}</option>;
@@ -71,10 +71,8 @@ export default function MovieGeneratorPanel(props) {
 
 				<div>
 					{/* <label htmlFor='rating'> </label> */}
-					<select name='rating' className={styles.input}>
-						<option id='rating' value=''>
-							Select By User Rating
-						</option>
+					<select id='rating' name='rating' className={styles.input}>
+						<option value=''>Select By User Rating</option>
 						<option value='10'>10</option>
 						<option value='9'>9</option>
 						<option value='8'>8</option>

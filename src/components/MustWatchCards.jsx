@@ -12,6 +12,7 @@ export default function MustWatchCards(props) {
 
 	// Iterate through movieCard's data to display each detail in it's own <p>
 	// Display image as well.
+	const details = [];
 	const responseCardDetails = [];
 
 	const keys = Object.keys(props.cardData.details);
@@ -19,16 +20,46 @@ export default function MustWatchCards(props) {
 	for (let i = 0; i < keys.length; i++) {
 		if (keys[i] === 'image') {
 			responseCardDetails.push(
-				<img width='200px' src={props.cardData.details[keys[i]]}></img>
+				<div className={styles.imgContainer}>
+					<img width='250px' src={props.cardData.details[keys[i]]}></img>
+				</div>
+			);
+		}
+		if (
+			keys[i] === 'Title' ||
+			keys[i] === 'Year' ||
+			keys[i] === 'Overview' ||
+			keys[i] === 'Rating'
+		) {
+			details.push(
+				<p>
+					{keys[i]}: {props.cardData.details[keys[i]]}
+				</p>
 			);
 		} else {
 			responseCardDetails.push(
-				<p className={keys[i]}>
-					{keys[i]} : {props.cardData.details[keys[i]]}
-				</p>
+				<div className={styles.detailsContainer}>{details}</div>
 			);
+			details = [];
 		}
 	}
+	// const responseCardDetails = [];
+
+	// const keys = Object.keys(props.cardData.details);
+
+	// for (let i = 0; i < keys.length; i++) {
+	// 	if (keys[i] === 'image') {
+	// 		responseCardDetails.push(
+	// 			<img width='200px' src={props.cardData.details[keys[i]]}></img>
+	// 		);
+	// 	} else {
+	// 		responseCardDetails.push(
+	// 			<p className={keys[i]}>
+	// 				{keys[i]} : {props.cardData.details[keys[i]]}
+	// 			</p>
+	// 		);
+	// 	}
+	// }
 
 	const removeMustWatch = (e) => {
 		return mustWatchDispatch({
@@ -38,12 +69,12 @@ export default function MustWatchCards(props) {
 	};
 
 	return (
-		<div>
-			<span>
+		<div className={styles.cardContainer}>
+			<span className={styles.detailImgContainer}>
 				{responseCardDetails}
 				{/* <button></button> */}
 			</span>
-			<div>
+			<div className={styles.buttonContainer}>
 				<button className='remove-must-watch' onClick={removeMustWatch}>
 					Remove Must Watch
 				</button>
